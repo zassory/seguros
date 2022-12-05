@@ -1,8 +1,15 @@
+import { CotizadorProvider } from './context/CotizadorProvider';
 import { AppSeguro } from "./components";
 
 export const App = () => {
   
   return (
-    <AppSeguro />
+    <CotizadorProvider
+      value={{
+        
+      }}
+    >
+      <AppSeguro />
+    </CotizadorProvider>
   )
 }
