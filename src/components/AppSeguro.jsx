@@ -1,6 +1,9 @@
 import { Formulario } from "./Formulario";
 
 export const AppSeguro = () => {
+
+  
+
   return (
     <>
         <header className="my-10">
