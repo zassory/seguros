@@ -17,6 +17,10 @@ const CotizadorProvider = ({ children }) => {
              [e.target.name]: e.target.value
          });
     }
+
+    const cotizarSeguro = () => {
+        console.log('Cotizando');
+    }
     
 
     return (
@@ -25,7 +29,8 @@ const CotizadorProvider = ({ children }) => {
                 datos,
                 handleChangeDatos,
                 error,
-                setError
+                setError,
+                cotizarSeguro
             }}
         >
             { children }
