@@ -59,6 +59,7 @@ export const Formulario = () => {
                     onChange={ e => handleChangeDatos(e) }
                     value={datos.year}
                 >
+                 <option value="">-- Seleccione un año --</option>
                  {YEARS.map( year => (
                     <option key={year} value={year}>{year}</option>
                  ) )}
