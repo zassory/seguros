@@ -4,7 +4,7 @@ import { useCotizador } from '../hooks/useCotizador';
 
 export const Formulario = () => {
 
-  
+  const { datos , handleChangeDatos } = useCotizador();
 
   return (
     <>
@@ -17,10 +17,17 @@ export const Formulario = () => {
                 <select
                     name="marca"
                     className="w-full p-3 bg-white border border-gray-200"
+                    onChange={ e => handleChangeDatos(e) }
+                    value={datos.marca}
                 >
                     <option value="">-- Selecciona Marca --</option>
                     {MARCAS.map( marca => (
-                        <option key={marca.id} value={marca.id}>{marca.nombre}</option>
+                        <option 
+                            key={marca.id} 
+                            value={marca.id}
+                            >
+                        {marca.nombre}
+                        </option>
                     ))}
                 </select>
             </div>
@@ -29,8 +36,10 @@ export const Formulario = () => {
                     Año
                 </label>
                 <select
-                    name="año"
+                    name="year"
                     className="w-full p-3 bg-white border border-gray-200"
+                    onChange={ e => handleChangeDatos(e) }
+                    value={datos.year}
                 >
                  {YEARS.map( year => (
                     <option key={year} value={year}>{year}</option>
@@ -51,6 +60,7 @@ export const Formulario = () => {
                                 type="radio"
                                 name="plan"
                                 value={plan.id}
+                                onChange={ e => handleChangeDatos(e) }
                             />
                         </Fragment>
                     ))}
