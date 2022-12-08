@@ -32,13 +32,13 @@ const CotizadorProvider = ({ children }) => {
         const diferencia = obtenerDiferenciaYear(datos.year);
 
         //Hay que restar el 3% por cada año
-        resultado -= ((diferencia * 3) * base) / 100;
+        resultado -= ((diferencia * 3) * resultado) / 100;
         
         resultado *= calcularMarca(datos.marca);
 
         resultado *= calcularPlan(datos.plan);
         //result = result.toFixed(2);
-        resultado = Number(formatearDinero(result));
+        resultado = formatearDinero(resultado);        
         setResultado(resultado);
     }
     
