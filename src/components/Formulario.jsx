@@ -5,7 +5,13 @@ import { Error } from "../components";
 
 export const Formulario = () => {
 
-  const { datos , handleChangeDatos , error , setError , cotizarSeguro } = useCotizador();
+  const { 
+    datos , 
+    handleChangeDatos , 
+    error , 
+    setError , 
+    cotizarSeguro , 
+     } = useCotizador();
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -15,7 +21,6 @@ export const Formulario = () => {
         return;
     }
     setError('');
-
     cotizarSeguro();
   }
 
@@ -27,7 +32,10 @@ export const Formulario = () => {
         >
             <div className="my-5">
                 <label className="block mb-3 font-bold text-gray-400 uppercase">
-                    { JSON.stringify(datos) }
+                    { JSON.stringify (datos) }
+                </label>
+                <label className="block mb-3 font-bold uppercase">
+                    
                 </label>
                 <label className="block mb-3 font-bold text-gray-400 uppercase">
                     Marca
