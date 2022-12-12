@@ -7,14 +7,13 @@ export const Resultado = () => {
   const { resultado , datos } = useCotizador();
   const { marca , plan , year } = datos;
   const yearRef = useRef(year);
-  console.log(yearRef);
 
   //Arreglo de dependencias, es cuando dejo de devolver la version cacheada y hago el re render
   const [nombreMarca] = useCallback( 
     MARCAS.filter( m  => m.id === Number(marca)),
     [ resultado ]
   );
-  const [nombrePlan] = useCallback(
+  const [nombrePlan] = useMemo( () =>
     PLANES.filter( p => p.id === Number(plan)),
     [ resultado ]
   );
