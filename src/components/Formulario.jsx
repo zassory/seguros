@@ -67,10 +67,10 @@ export const Formulario = () => {
                     onChange={ e => handleChangeDatos(e) }
                     value={datos.year}
                 >
-                 <option value="">-- Seleccione un año --</option>
-                 {YEARS.map( year => (
-                    <option key={year} value={year}>{year}</option>
-                 ) )}
+                    <option value="">-- Seleccione un año --</option>
+                    {YEARS.map( year => (
+                        <option key={year} value={year}>{year}</option>
+                    ) )}
                 </select>
             </div>
             <div className="my-5">
