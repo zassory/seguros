@@ -7,6 +7,7 @@ import {
 
 const CotizadorContext = createContext();
 
+//------------------------------------------------->
 const CotizadorProvider = ({ children }) => {
 
     const [datos,setDatos] = useState({
@@ -45,7 +46,7 @@ const CotizadorProvider = ({ children }) => {
         setTimeout(() => {
             setCargando(false);
             setResultado(resultado);
-        },3000);        
+        },3000);
     }
     
 
